@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Image</title>
+    <title>Circular Image Cards Example</title>
     <style>
         body {
             margin: 0;
@@ -29,25 +27,39 @@
 
         .card {
             background-color: white; /* Card background color */
-            border-radius: 8px; /* Rounded corners */
+            border-radius: 50%; /* Make the card circular */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
             overflow: hidden; /* Prevent overflow */
             transition: transform 0.2s; /* Smooth hover effect */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px; /* Fixed width for circular effect */
+            height: 200px; /* Fixed height for circular effect */
         }
 
         .card img {
             width: 100%; /* Full width of the card */
-            height: auto; /* Maintain aspect ratio */
+            height: 100%; /* Full height of the card */
+            object-fit: cover; /* Cover the card area */
+            border-radius: 50%; /* Make the image circular */
+            transition: transform 0.3s; /* Smooth transition for image */
         }
 
         .card:hover {
-            transform: scale(1.05); /* Scale effect on hover */
+            transform: scale(1.1); /* Scale effect on hover */
+        }
+
+        .card:hover img {
+            transform: scale(1.1); /* Scale effect on hover for image */
         }
 
         .card-title {
-            padding: 16px; /* Padding for the title */
+            padding: 8px; /* Padding for the title */
             text-align: center; /* Center the text */
-            font-size: 1.2em; /* Font size */
+            font-size: 1em; /* Font size */
+            margin-top: 8px; /* Space between image and title */
         }
     </style>
 </head>
@@ -59,7 +71,7 @@
     <script>
         // Array of image objects
         const images = [
-            { src: 'grp.jpg', title: 'welcome' }, // Replace with your image URLs
+            { src: 'grp.jpg', title: 'Welcome' }, // First image with title
             { src: '1.jpg' },
             { src: '2.jpg' },
             { src: '3.jpg' },
@@ -69,7 +81,6 @@
             { src: '7.jpg' },
             { src: '8.jpg' },
             { src: '9.jpg' },
-
             // Add more images as needed
         ];
 
@@ -85,16 +96,18 @@
                 // Create image element
                 const img = document.createElement('img');
                 img.src = image.src;
-                img.alt = image.title;
+                img.alt = image.title || 'Image'; // Default alt text if title is not provided
 
-                // Create title element
+                // Create title element if title exists
                 const title = document.createElement('div');
                 title.className = 'card-title';
-                title.textContent = image.title;
+                title.textContent = image.title || ''; // Only set title if it exists
 
                 // Append image and title to card
                 card.appendChild(img);
-                card.appendChild(title);
+                if (image.title) {
+                    card.appendChild(title);
+                }
 
                 // Append card to container
                 container.appendChild(card);
