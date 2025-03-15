@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Image Cards Example</title>
+    <title>Responsive Circular Image Cards Example</title>
     <style>
         body {
             margin: 0;
@@ -18,7 +18,7 @@
 
         .card-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
             gap: 16px; /* Space between cards */
             padding: 16px;
             max-width: 1200px; /* Max width for the container */
@@ -35,11 +35,15 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 200px; /* Fixed width for circular effect */
-            height: 200px; /* Fixed height for circular effect */
+            width: 100%; /* Full width of the card */
+            padding-top: 100%; /* Maintain aspect ratio for circular shape */
+            position: relative; /* Position relative for absolute children */
         }
 
         .card img {
+            position: absolute; /* Position image absolutely */
+            top: 0;
+            left: 0;
             width: 100%; /* Full width of the card */
             height: 100%; /* Full height of the card */
             object-fit: cover; /* Cover the card area */
@@ -71,7 +75,7 @@
     <script>
         // Array of image objects
         const images = [
-            { src: 'grp.jpg'}, // First image with title
+            { src: 'grp.jpg' }, // First image with title
             { src: '1.jpg' },
             { src: '2.jpg' },
             { src: '3.jpg' },
