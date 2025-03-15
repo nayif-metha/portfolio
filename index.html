@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HI</title>
+    <title>Slideshow</title>
     <style>
         body {
             margin: 0;
             height: 100vh; /* Full height of the viewport */
-            background-image: url('grp.jpg'); /* Replace with your image URL */
-            background-size: fit; /* Cover the entire viewport */
-            background-position: center; /* Center the image */
-            background-repeat: no-repeat; /* Prevent the image from repeating */
+            overflow: hidden; /* Hide overflow */
+            transition: background-image 1s ease-in-out; /* Smooth transition */
         }
     </style>
 </head>
 <body>
+    <script>
+        const images = [
+            'grp.jpg'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % images.length; // Loop through images
+        }
+
+        // Set initial background
+        changeBackground();
+        // Change background every 5 seconds
+        setInterval(changeBackground, 5000);
+    </script>
 </body>
 </html>
