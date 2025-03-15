@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="mylogo.png" rel="icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Circular Image Cards Example</title>
+    <title>MEMORIES</title>
     <style>
         body {
             margin: 0;
@@ -14,6 +15,21 @@
             flex-direction: column;
             height: 100vh; /* Full height of the viewport */
             background-color: #f0f0f0; /* Light background color */
+        }
+
+        .logo {
+            margin: 20px 0; /* Space around the logo */
+            text-align: center; /* Center the logo and heading */
+        }
+
+        .logo img {
+            max-width: 150px; /* Set a max width for the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .logo h1 {
+            font-size: 24px; /* Font size for the heading */
+            margin: 10px 0; /* Space around the heading */
         }
 
         .card-container {
@@ -68,6 +84,11 @@
     </style>
 </head>
 <body>
+    <div class="logo">
+        <img src="mylogo.png" alt="Logo"> <!-- Replace with your logo URL -->
+        <h1>MEMORIES</h1> <!-- Replace with your heading -->
+    </div>
+
     <div class="card-container" id="card-container">
         <!-- Cards will be dynamically generated here -->
     </div>
@@ -75,7 +96,7 @@
     <script>
         // Array of image objects
         const images = [
-            { src: 'grp.jpg' }, // First image with title
+            { src: 'grp.jpg', title: 'Welcome' }, // First image with title
             { src: '1.jpg' },
             { src: '2.jpg' },
             { src: '3.jpg' },
@@ -100,7 +121,7 @@
                 // Create image element
                 const img = document.createElement('img');
                 img.src = image.src;
-                img.alt = image.title || 'Image'; // Default alt text if title is not provided
+ img.alt = image.title || 'Image'; // Default alt text if title is not provided
 
                 // Create title element if title exists
                 const title = document.createElement('div');
