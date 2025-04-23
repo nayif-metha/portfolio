@@ -1,146 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link href="mylogo.png" rel="icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEMORIES</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh; /* Full height of the viewport */
-            background-color: #f0f0f0; /* Light background color */
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>NAYIF METHA</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-        .logo {
-            margin: 20px 0; /* Space around the logo */
-            text-align: center; /* Center the logo and heading */
-        }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        .logo img {
-            max-width: 150px; /* Set a max width for the logo */
-            height: auto; /* Maintain aspect ratio */
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        .logo h1 {
-            font-size: 24px; /* Font size for the heading */
-            margin: 10px 0; /* Space around the heading */
-        }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
-            gap: 16px; /* Space between cards */
-            padding: 16px;
-            max-width: 1200px; /* Max width for the container */
-            width: 100%; /* Full width */
-        }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-        .card {
-            background-color: white; /* Card background color */
-            border-radius: 50%; /* Make the card circular */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-            overflow: hidden; /* Prevent overflow */
-            transition: transform 0.2s; /* Smooth hover effect */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%; /* Full width of the card */
-            padding-top: 100%; /* Maintain aspect ratio for circular shape */
-            position: relative; /* Position relative for absolute children */
-        }
 
-        .card img {
-            position: absolute; /* Position image absolutely */
-            top: 0;
-            left: 0;
-            width: 100%; /* Full width of the card */
-            height: 100%; /* Full height of the card */
-            object-fit: cover; /* Cover the card area */
-            border-radius: 50%; /* Make the image circular */
-            transition: transform 0.3s; /* Smooth transition for image */
-        }
-
-        .card:hover {
-            transform: scale(1.1); /* Scale effect on hover */
-        }
-
-        .card:hover img {
-            transform: scale(1.1); /* Scale effect on hover for image */
-        }
-
-        .card-title {
-            padding: 8px; /* Padding for the title */
-            text-align: center; /* Center the text */
-            font-size: 1em; /* Font size */
-            margin-top: 8px; /* Space between image and title */
-        }
-    </style>
 </head>
-<body>
-    <div class="logo">
-        <img src="mylogo.png" alt="Logo"> <!-- Replace with your logo URL -->
-        <h1>MEMORIES</h1> <!-- Replace with your heading -->
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <div class="card-container" id="card-container">
-        <!-- Cards will be dynamically generated here -->
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Muhammed Nayif M Navab Metha</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
+      <a href="https://github.com/nayif-metha" class="github" target="_blank"><i class="bi bi-github"></i></a>      
+      <a href="https://linkedin.com/in/nayif-metha" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://facebook.com/muhammednayif2002" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://instagram.com/nayif_metha" class="instagram"><i class="bi bi-instagram"></i></a>
+      
     </div>
 
-    <script>
-        // Array of image objects
-        const images = [
-            { src: 'grp.jpg', title: 'Welcome' }, // First image with title
-            { src: '1.jpg' },
-            { src: '2.jpg' },
-            { src: '3.jpg' },
-            { src: '4.jpg' },
-            { src: '5.jpg' },
-            { src: '6.jpg' },
-            { src: '7.jpg' },
-            { src: '8.jpg' },
-            { src: '9.jpg' },
-            // Add more images as needed
-        ];
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <!-- <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li> -->
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
 
-        // Function to create image cards
-        function createImageCards() {
-            const container = document.getElementById('card-container');
+  </header>
 
-            images.forEach(image => {
-                // Create card element
-                const card = document.createElement('div');
-                card.className = 'card';
+  <main class="main">
 
-                // Create image element
-                const img = document.createElement('img');
-                img.src = image.src;
- img.alt = image.title || 'Image'; // Default alt text if title is not provided
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
 
-                // Create title element if title exists
-                const title = document.createElement('div');
-                title.className = 'card-title';
-                title.textContent = image.title || ''; // Only set title if it exists
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
 
-                // Append image and title to card
-                card.appendChild(img);
-                if (image.title) {
-                    card.appendChild(title);
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Muhammed Nayif M Navab Metha</h2>
+        <p>I'm <span class="typed" data-typed-items="Developer,Freelancer,Designer"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+    <!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>About</h2>
+  <p>I am a passionate Python full-stack developer with experience in building dynamic and responsive web applications. My expertise lies in both front-end and back-end development, allowing me to create seamless user experiences. I enjoy tackling complex problems and turning ideas into reality through code. With a strong foundation in frameworks like Django and Flask, as well as proficiency in JavaScript, HTML, and CSS, I strive to deliver high-quality solutions that meet client needs. I am always eager to learn new technologies and improve my skills in the ever-evolving tech landscape.</p>
+</div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Python Full-Stack Web Developer.</h2>
+            <p class="fst-italic py-3">
+              As a dedicated Python full-stack developer, I thrive on transforming innovative ideas into functional web applications. My journey in coding has been fueled by a passion for problem-solving and a commitment to continuous learning. I enjoy collaborating with teams to create user-friendly interfaces and robust back-end systems that enhance the overall user experience.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>11 February 2002</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>nayifmetha.my.to</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 996 154 6070</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kerala, India</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Technology in Computer Science</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>nayifmetha@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              In my role as a Python full-stack developer, I focus on delivering high-quality solutions that meet the needs of users and clients alike. I believe in the importance of clean, maintainable code and strive to create applications that are not only functional but also enjoyable to use. My approach combines technical expertise with a user-centered mindset, ensuring that every project I undertake is both efficient and effective. I am committed to continuous improvement and staying updated with the latest industry trends to provide the best possible outcomes.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <!-- <p>
+          I am dedicated to understanding user needs and delivering solutions that not only meet those needs but also exceed expectations. My work is driven by a commitment to quality and a passion for creating seamless experiences that integrate both front-end and back-end technologies.
+        </p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>JavaScript</span> <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Python</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Django</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Machine Learning</span> <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <a href="assets/resume.pdf" class="btn btn-primary" download>
+          <i class="bi bi-file-earmark-text"></i> Download Resume
+        </a>
+        </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Muhammed Nayif M Navab Metha</h4>
+              <p><em>Results-oriented Python Developer with experience optimizing database queries and designing user interfaces using HTML5 and CSS3 technologies. Skilled in writing well-designed, testable code and creating web-based applications utilizing Django .Strong problem-solving and creative thinking abilities, with a focus on delivering high-quality results. Excellent time management and leadership skills, with a commitment to providing exceptional customer service.</em></p>
+              <ul>
+                <li>Alappuzha, Kerala, India</li>
+                <li>+91 996 154 6070</li>
+                <li>nayifmetha@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Technology in Computer Science &amp; Engineering</h4>
+              <h5>2020 - 2024</h5>
+              <p><em>St. Thomas college of Engineering &amp; Technology chengannur, Alappuzha, Kerala</em></p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Directorate of Higher Secondary Education in Computer Science</h4>
+              <h5>2018 - 2020</h5>
+              <p><em>SMHSS Purakkad, Alappuzha, Kerala</em></p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Kerala State Technical Education in Electrical &amp; Electronics</h4>
+              <h5>2015 - 2018</h5>
+              <p><em>THS Krishnapuram, Alappuzha, Kerala</em></p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Freelance Wed Developer</h4>
+              <h5>March 2025 - Present</h5>
+              <p><em>Kerala, India </em></p>
+              <ul>
+                <li>Adapted quickly to new environments and challenges.</li>
+                <li>Developed and maintained relationships with clients to ensure satisfaction with the final product. </li>
+                <li>Utilized strong communication skills to collaborate with clients.</li>
+                <li>Developed custom websites to meet individual client needs.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Python Developer Intern</h4>
+              <h5>March 2024 - February 2025</h5>
+              <p><em>Soften Technologies, Eranakulam , Kerala</em></p>
+              <ul>
+                <li>Optimized database queries using Django ORM for improved performance of web applications.</li>
+                <li>Designed user interfaces using HTML5 and CSS3 technologies and implemented them into the Django framework.</li>
+                <li>Wrote well-designed, testable code.</li>
+                <li>Created web-based applications utilizing Django, Flask, and other frameworks.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Sales Promoter at Tata Consumer Products</h4>
+              <h5>August 2024 - December 2024</h5>
+              <p><em>LuLu Group International, Eranakulam , Kerala</em></p>
+              <ul>
+                <li>Assisted in the design of point-of-sale displays to maximize visibility and attract attention from customers.</li>
+                <li>Established strong relationships with clients by providing knowledgeable advice on products and services.</li>
+                <li>Maintained detailed records of sales transactions for reporting purposes.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>
+          As a Python full-stack developer, I have had the opportunity to work on a variety of projects that showcase my skills in both front-end and back-end development. My portfolio includes dynamic web applications, user-friendly interfaces, and robust back-end systems built using frameworks like Django and Flask. I am passionate about creating solutions that not only meet client requirements but also enhance user experience. Explore my work below to see how I bring ideas to life through code.
+        </p>      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <!-- <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Product</li>
+            <li data-filter=".filter-branding">Branding</li>
+            <li data-filter=".filter-books">Books</li>
+          </ul>End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/project2/1.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>VITTILE KOOTT</h4>
+                  <p>Enjoy Your Healthy Delicious Homely Meals</p>
+                  <a href="assets/img/portfolio/project2/1.png" title="VITTILE KOOTT" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/project1/1.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>BOTANY GURU</h4>
+                  <p>Good Health Is The Root Of All Happiness</p>
+                  <a href="assets/img/portfolio/project1/1.png" title="BOTANY GURU" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>
+          I would love to hear from you! Whether you have a question, want to discuss a project, or just want to connect, feel free to reach out. You can fill out the form below, and I will get back to you as soon as possible.
+        </p>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>AL-Salam, Arattupuzha North P.O, Alappuzha, Kerala, India, 690515</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Me</h3>
+                  <p>+91 996 154 6070</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email me</h3>
+                  <p>nayifmetha@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4310.246881906334!2d76.42404820137796!3d9.229379991453547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08a183b715c381%3A0xa039367755414f81!2sJ%20M%20Traders!5e0!3m2!1sen!2sin!4v1745360734768!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form id="contactForm" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+          
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required>
+                </div>
+          
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required>
+                </div>
+          
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required>
+                </div>
+          
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
+                </div>
+          
+                <div class="col-md-12 text-center">
+                  <div class="loading" style="display:none;">Loading</div>
+                  <!-- <div class="error-message" style="display:none;"></div> -->
+                  <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
+          
+                  <button type="submit">Send Message</button>
+                </div>
+          
+              </div>
+            </form>
+          </div>
+          
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent the default form submission
+          
+              // Show loading message
+              document.querySelector('.loading').style.display = 'block';
+          
+              let formData = new FormData(this); // Gather form data
+          
+              fetch('https://formspree.io/f/movdqqdl', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                  'Accept': 'application/json'
                 }
-
-                // Append card to container
-                container.appendChild(card);
+              })
+              .then(response => {
+                if (response.ok) {
+                  document.querySelector('.sent-message').style.display = 'block'; // Show success message
+                  this.reset(); // Reset the form fields
+                } else {
+                  throw new Error('Network response was not ok.');
+                }
+              })
+              .catch(error => {
+                document.querySelector('.error-message').textContent = 'There was a problem with your submission: ' + error.message;
+                document.querySelector('.error-message').style.display = 'block'; // Show error message
+              })
+              .finally(() => {
+                document.querySelector('.loading').style.display = 'none'; // Hide loading message
+              });
             });
-        }
+          </script>
 
-        // Call the function to create cards
-        createImageCards();
-    </script>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© </span> <strong class="px-1 sitename">Nayif_Metha 2025</strong></p>
+      </div>
+      
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
